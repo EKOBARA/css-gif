@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+}
+
+body {
+    align-items: center;
+    margin: 2rem;
+    max-height: 100vh;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 33% 1fr 33%;
+    grid-template-rows: inherit;
+    border: 1px solid black;
+    height: 90vh;    
+}
+
+.text {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.one {
+    animation: colorTwo 2.8s infinite ease-in-out;
+}
+
+.two {
+    transform: rotate(360deg);
+    animation: rotation 3s infinite ease-in-out;
+}
+
+.three {
+    animation: move 3s infinite linear;
+}
+
+.one-box {
+    animation: bgcolor 2.8s infinite ease-in-out;
+}
+
+.three-box {
+    background-color: blue;
+    animation: color 2s infinite ease-in-out;
+}
+
+@keyframes bgcolor {
+    0% {
+        background-color: blue;
+
+    }
+    50% {
+        background-color: yellow;
+    }
+    100%{
+        background-color: blue;
+    }
+}
+
+@keyframes colorTwo {
+    
+    0% {
+        color: white
+    }
+
+    50% {
+        color: black
+    }
+
+    100% {
+        color: white
+    }
+}
+
+@keyframes color {
+    
+    0% {
+        color: black
+    }
+
+    30% {
+        color: grey
+    }
+
+    60% {
+        color: white
+    }
+
+    90% {
+        color: grey
+    }
+
+    100% {
+        color: black
+    }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(3em);
+    }
+    60% {
+       transform: translateY(-3em);
+    }
+    100% {
+        transform: translateY(0);
+    } 
+}
