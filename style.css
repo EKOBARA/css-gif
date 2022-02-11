@@ -37,7 +37,7 @@ body {
 }
 
 .three {
-    animation: move 3s infinite linear;
+    animation: move 2.5s infinite linear;
 }
 
 .one-box {
